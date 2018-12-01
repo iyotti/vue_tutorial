@@ -1,0 +1,22 @@
+<html>
+<head>
+
+<!-- 開発バージョン、便利なコンソールの警告が含まれています -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<span>Message: {{ msg }}</span>
+	<span v-once>This will newver change: {{ msg }}</span>
+	<p>Using mustaches: {{ rawHtml }}</p>
+	<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+	<div v-bind:id="dynamicId"></div>
+	<button v-bind:disabled="isButtonDisabled">Button</button>
+	{{ var a = 1 }}
+	{{ if(ok) { return message }}}
+	<p v-if="seen">Now you see me</p>
+	<a v-bind:href="url">...</a>
+	<a v-on:click="doSomething">...</a>
+	<form v-on:submit.prevent="onSubmit">...</form>
+	<script src="template.js"></script>
+</body>
+</html>
